@@ -39,7 +39,7 @@ For more details, view the repository: [abhin9v/ReadmeGENAI](https://github.com/
 
 After installation, you can run the project using:
 ```bash
-python main.py
+streamlit run app.py
 ```
 Adjust the entry point as needed for your project structure.
 
