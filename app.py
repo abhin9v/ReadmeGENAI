@@ -9,7 +9,7 @@ repo_url = st.text_input("Enter GitHub Repository URL")
 if st.button("Generate README"):
     repo_data = fetch_repo_data(repo_url)
     if repo_data:
-        with st.spinner("Generating README with Perplexity..."):
+        with st.spinner("Generating README with ..."):
             readme = generate_readme_from_repo(repo_data)
             st.success("README generated successfully!")
             st.code(readme, language='markdown')
