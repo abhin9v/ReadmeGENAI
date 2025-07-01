@@ -3,7 +3,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-PPLX_API_KEY = os.getenv("PPLX_API_KEY")
+YOUR_API_KEY = os.getenv("API_KEY")
 
 def generate_readme_from_repo(repo_info):
     prompt = f"""
@@ -21,11 +21,11 @@ Include sections like Description, Features, Installation, Usage, Technologies U
     response = requests.post(
         "https://api.perplexity.ai/chat/completions",
         headers={
-            "Authorization": f"Bearer {PPLX_API_KEY}",
+            "Authorization": f"Bearer {API_KEY}",
             "Content-Type": "application/json"
         },
         json={
-            "model": "sonar-pro",
+            "model": "model",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.7
         }
